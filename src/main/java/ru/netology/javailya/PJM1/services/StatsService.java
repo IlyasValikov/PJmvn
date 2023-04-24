@@ -24,19 +24,13 @@ public class StatsService {
     }
 
     public int middleSales(long[] sales) {
-        int result = 0;
-        int [] nums = { 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18 };
-        for (int i : nums) {
-            result += i;
-        }
-        return result / nums.length;
+        return salesSum(sales) / sales.length;
     }
 
     public int salesSum (long[] sales) {
         int sum = 0;
-        int allDatas[] = { 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18 };
-        for (int i = 0; i < allDatas.length; i++) {
-            sum = sum + allDatas[i];
+        for (long sale : sales) {
+            sum += sale;
         }
         return sum;
     }
